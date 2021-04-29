@@ -1,18 +1,44 @@
-'''
-Ex:1 Move Zeros elements to end of the array
-'''
+from typing import List
 
-array_int = [1,0,3,4,4,0,0,0,5,6,7]
+class Solution:
 
-print(array_int)
+    def moveZerosToBack(self, nums:List[int]) -> None:
+        print("moveZerosToBack")
+        print(nums)
+        j = 0
+        for num in nums:
+            if num != 0:
+                nums[j] = num
+                j = j+1
+        else:
+            for c_index in range(j,len(nums)):
+                nums[c_index] = 0
 
-j = 0
-for num in array_int:
-    if num != 0:
-        array_int[j] = num
-        j = j+1
-else:
-    for c_index in range(j,len(array_int)):
-        array_int[c_index] = 0
+        print(nums)
 
-print(array_int)
+        # Time Complexity: O(2n) => O(n) [Linear algorithm]
+        # Space Complexity: 0(1)
+
+    def moveZerosToFront(self, nums: List[int]) -> None:
+        print("moveZerosToFront")
+        print(nums)
+        j = len(nums)-1
+
+        for c_index in range(len(nums)-1,-1,-1):
+            if nums[c_index] != 0:
+                nums[j] = nums[c_index]
+                j= j-1
+        else:
+            for c_index in range(j+1):
+                nums[c_index] = 0
+
+        print(nums)
+
+
+        # Time Complexity: O(2n) => O(n) [Linear algorithm]
+        # Space Complexity: 0(1)
+
+solution = Solution()
+nums = [1,2,3,4,0,0,5,4,0,4,6]
+solution.moveZerosToBack(nums)
+solution.moveZerosToFront(nums)

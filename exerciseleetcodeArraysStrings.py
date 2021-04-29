@@ -38,7 +38,36 @@ class Solution:
         # Time Complexity: O(2n) => O(n) [Linear algorithm]
         # Space Complexity: 0(1)
 
+    def boats_to_save_people(self,persons_weight:List[int],max_weight:int):
+        persons_weight.sort();
+        print(persons_weight)
+
+        left = 0;
+        right = len(persons_weight)-1
+        no_of_boats = 0
+
+        while(left <= right):
+            if left == right:
+                no_of_boats = no_of_boats + 1
+                break;
+            elif persons_weight[left] + persons_weight[right] <= max_weight:
+                no_of_boats = no_of_boats +1
+                left = left+1
+                right = right-1
+            else:
+                no_of_boats = no_of_boats+1
+                right = right-1
+
+        print(no_of_boats)
+
+        # Time Complexity: O(nlog(n)) - because of Sorting Algorithm
+        # Space Complexity: 0(n)
+
+
+
 solution = Solution()
 nums = [1,2,3,4,0,0,5,4,0,4,6]
-solution.moveZerosToBack(nums)
-solution.moveZerosToFront(nums)
+persons_weight = [2,2,1,1,1,1,1,1,3]
+# solution.moveZerosToBack(nums)
+# solution.moveZerosToFront(nums)
+solution.boats_to_save_people(persons_weight,3)

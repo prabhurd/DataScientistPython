@@ -1,9 +1,0 @@
-Python/Java/:
- - programming
- - mathematical opeartions
- - Loop
- - array
- - array manipulate
- - Data  - List, Tuple, Array, Dict
-
-

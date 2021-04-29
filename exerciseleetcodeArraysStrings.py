@@ -51,12 +51,9 @@ class Solution:
                 no_of_boats = no_of_boats + 1
                 break;
             elif persons_weight[left] + persons_weight[right] <= max_weight:
-                no_of_boats = no_of_boats +1
                 left = left+1
-                right = right-1
-            else:
-                no_of_boats = no_of_boats+1
-                right = right-1
+            no_of_boats = no_of_boats+1
+            right = right-1
 
         print(no_of_boats)
 

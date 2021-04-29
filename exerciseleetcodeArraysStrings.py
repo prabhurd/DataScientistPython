@@ -60,6 +60,20 @@ class Solution:
         # Time Complexity: O(nlog(n)) - because of Sorting Algorithm
         # Space Complexity: 0(n)
 
+    def valid_mountain_array(self,nums:List[int]):
+        j = 1
+        while j < len(nums) and nums[j] > nums[j-1]:
+            j += 1
+
+        if j == 1 or j == len(nums):
+            return False
+
+        while j < len(nums) and nums[j] < nums[j-1]:
+            j += 1
+
+        return j == len(nums)
+    # Time Complexity: O(N)
+    # Space Complexity: O(1)
 
 
 solution = Solution()
@@ -67,4 +81,5 @@ nums = [1,2,3,4,0,0,5,4,0,4,6]
 persons_weight = [2,2,1,1,1,1,1,1,3]
 # solution.moveZerosToBack(nums)
 # solution.moveZerosToFront(nums)
-solution.boats_to_save_people(persons_weight,3)
+# solution.boats_to_save_people(persons_weight,3)
+print(solution.valid_mountain_array([0,2,3,4,5,2,1]))

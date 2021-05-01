@@ -44,6 +44,20 @@ Basics:
     - Graphs and Tables
 
 
+Measures of Central Tendency:
+
+Mean:
+    - also known as simple average
+    - denoted by Mu (Population)
+    - denoted by x bar (Sample)
+    - (x1 + x2 + Xn)/n
+    - affected by outlier
+    - mean is not enough to make define conclusion
+
+Median:
+    - middle number in the dataset
+    - 
+
 
 
 

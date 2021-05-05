@@ -1,2 +1,6 @@
-import os
-print(os.getcwd())
+def f1():
+    print("hi")
+
+def f2():
+
+print(f1)

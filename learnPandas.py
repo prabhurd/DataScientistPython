@@ -1,56 +1,32 @@
+#https://nbviewer.jupyter.org/github/justmarkham/pandas-videos/blob/master/pandas.ipynb#1.-What-is-pandas%3F-%28video%29
+
 import pandas as pd
 import numpy as np
 
-list_nums = [0,1,2,3]
+'''1. What is pandas?'''
 
-df_list = pd.DataFrame(list_nums)
+'''2. How do I read a tabular data file into pandas? '''
 
-df_list.columns = [ "COLUMN_"+str(i) for i in range(len(df_list.columns)) ]
-df_list.index = ["ROW_"+str(i) for i in range(0,df_list.size)]
+df = pd.read_table('test.txt',sep=" ")
+# print(df.columns)
 
-# print(df_list)
-# print(50*'*')
-#COLUMN Selection
-# print(df_list['COLUMN_0'])
-
-#COLUMN ADDITION
-df_list['COLUMN_NEW'] = ['TEST'+str(i) for i in range(df_list.size)]
-# print(df_list)
-
-#COLUMN DEL
-
-#del df_list['COLUMN_0']
-
-# print(df_list)
-
-#df_list.pop('COLUMN_NEW')
-
-print(df_list)
-
-print(40*'*')
-#ROW SELECTION
-
-#LOC
-print(df_list.loc[:,:])
-print(df_list.loc['ROW_0':'ROW_2',:])
-print(df_list.loc[:'ROW_2',:])
-print(df_list.loc['ROW_1':'ROW_2',:])
-print(df_list.loc['ROW_1':'ROW_2','COLUMN_0':'COLUMN_NEW'])
-
-#iLOC
-print(df_list.iloc[:,:])
-print(df_list.iloc[0:3,:])
-print(df_list.iloc[:3,:])
-print(df_list.iloc[1:3,:])
-print(df_list.iloc[1:3,0:1])
+'''How do I select a pandas Series from a DataFrame?'''
+# print(df['FirstName'])
 
 
-print(df_list)
+'''
+Why do some pandas commands end with parentheses (and others don't)?
+'''
+print(df.head(2))
 
-# df_list['COLUMN_SQUARE'] = df_list['COLUMN_0']*df_list['COLUMN_0']
+print(df.shape)
 
-df_list['COLUMN_SQUARE']  = df_list.loc[:,'COLUMN_0'] * df_list.loc[:,'COLUMN_0']
+'''
+How do I rename columns in a pandas DataFrame?
+'''
 
-df_list.loc[:,'COLUMN_0'].apply(lambda x: x*x*x+8)
+df['CityName'] = df['City'].str.upper()
 
-print(df_list)
+del df['City']
+
+print(df)

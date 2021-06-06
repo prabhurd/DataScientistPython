@@ -21,6 +21,7 @@ Design you dashboard
 What Kind of Visualization, you should choose:
     - Comparison
         - Bar Chart
+        - Histogram (Range, Distribution, Binning, Bucket)
         - Column Chart
         - Comparing Values (x - name, y - height) (Two variable)
         - Only Discrete Data
@@ -43,3 +44,33 @@ What Kind of Visualization, you should choose:
         - Dot Chart
         - Dial Chart (Bullet Chart)
         - Stacked 100 % Bar Chart
+
+Tableau:
+    - User Interface
+    - BI Tools
+    - Main Goal: Dashboard
+    - Window Based Tools
+    - Licensed Product
+
+Tableau Products:
+    - Tableau Desktop (Connect to hive, bigquery, oracle, others)
+    - Tableau Server
+    - Tableau public Desktop (Freeware - Limitation to csv and excel, only cloud Save)
+    - Tableau Online
+    - Tableau Reader
+
+Tableau Desktop - Students for 1 Year free
+
+Alternatives:
+    - d3js
+    - apache
+    - Power BI
+
+Facts and Dimension:
+    - Split the data
+    - Columns - Dimension
+    - Data - Facts
+    - Data Warehouse:
+        - Collection of all data
+        - Combine the data using ID
+
